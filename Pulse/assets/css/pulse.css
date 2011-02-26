@@ -1,0 +1,45 @@
+.pulse_votes_container {
+
+}
+
+.pulse_vote_buttons {
+
+}
+
+.thumb1 .vote_up {
+	height:20px;
+	display:inline-block;
+	text-indent:-1000%;
+	width:20px;
+	background:url("../images/thumb_up.png") no-repeat center center;
+}
+.thumb1 .vote_down {
+	height:20px;
+	display:inline-block;
+	text-indent:-1000%;
+	width:20px;
+	background:url("../images/thumb_down.png") no-repeat center center;
+}
+
+.thumb2  .vote_up {
+	height:20px;
+	display:inline-block;
+	text-indent:-1000%;
+	width:20px;
+	background:url("../images/thumb_up2.png") no-repeat center center;
+}
+
+.thumb2  .vote_down {
+	height:20px;
+	display:inline-block;
+	text-indent:-1000%;
+	width:20px;
+	background:url("../images/thumb_down2.png") no-repeat center center;
+}
+
+span.pulse_load {
+	background:url("../images/ajaxloader.gif") no-repeat center center;
+	height:11px;
+	width:16px;
+	display:inline-block;
+}
