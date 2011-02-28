@@ -1,1 +1,1 @@
-Usage and Installation instructions are avaialable at http://s.technabled.com/PulseVote
+Usage and Installation instructions are avaialable at [Technabled](http://s.technabled.com/PulseVote)
