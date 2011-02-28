@@ -1,5 +1,5 @@
 $(function(){
-	var u = "http://127.0.0.1/pulse/codes/lite/Pulse"; // NO trailing slash
+	var u = "ENTER_ABSOLUTE_PATH_OF_PULSE_DIR"; // NO trailing slash
 	$("a.pulse_vote_button").live('click', function(){
 		var item_id = $(this).attr("data-itemId"); // id of the item to vote
 		var format = $(this).attr("data-format"); // result format
