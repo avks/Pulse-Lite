@@ -1,4 +1,8 @@
 <?php 
+/**
+Pulse Lite Voting Script
+http://s.technabled.com/PulseVote
+**/
 if(!$_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'){
 		die("No direct access to files is allowed");  
 	}

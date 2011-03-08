@@ -1,3 +1,9 @@
+/**
+Pulse Lite Voting Script
+http://s.technabled.com/PulseVote
+**/
+
+/** Global Overrides **/
 .pulse_votes_container {
 
 }
@@ -6,19 +12,42 @@
 
 }
 
-.thumb1 .vote_up {
+input.pulse_vote_button {
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+
+.thumb1 input.vote_up {
 	height:20px;
 	display:inline-block;
 	text-indent:-1000%;
 	width:20px;
 	background:url("../images/thumb_up.png") no-repeat center center;
 }
-.thumb1 .vote_down {
+
+.thumb1 input[disabled='disabled'].vote_up, .thumb1 input.vote_up.disabled {
+	height:20px;
+	display:inline-block;
+	text-indent:-1000%;
+	width:20px;
+	background:url("../images/thumb_up_disabled.png") no-repeat center center;
+}
+
+.thumb1 input.vote_down {
 	height:20px;
 	display:inline-block;
 	text-indent:-1000%;
 	width:20px;
 	background:url("../images/thumb_down.png") no-repeat center center;
+}
+
+.thumb1 input[disabled='disabled'].vote_down, .thumb1 input.vote_down.disabled {
+	height:20px;
+	display:inline-block;
+	text-indent:-1000%;
+	width:20px;
+	background:url("../images/thumb_down_disabled.png") no-repeat center center;
 }
 
 .thumb2  .vote_up {
@@ -35,6 +64,127 @@
 	text-indent:-1000%;
 	width:20px;
 	background:url("../images/thumb_down2.png") no-repeat center center;
+}
+
+/**
+YouTube Style Buttons
+**/
+.pulse_votes_container.youtube {
+	background: #ffffff; /* old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* webkit */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* ie */
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #cccccc;
+	width:60px;
+	text-align:center;
+	padding:3px;
+}
+
+.youtube  .pulse_vote_buttons{
+	padding:2px;
+}
+
+.youtube  input.vote_up {
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/youtube_thumb_up.png") no-repeat center center;
+}
+
+.youtube  input[disabled='disabled'].vote_up, .youtube  input.vote_up.disabled{
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/youtube_thumb_up_disabled.png") no-repeat center center;
+}
+
+.youtube  input.vote_down{
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/youtube_thumb_down.png") no-repeat center center;
+}
+
+.youtube  input[disabled='disabled'].vote_down, .youtube  input.vote_down.disabled {
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/youtube_thumb_down_disabled.png") no-repeat center center;
+}
+
+.youtube .pulse_result_format {
+	display:block;
+	font-family:verdana,arial,helvetica,sans-serif;
+	margin-top:4px;
+	font-size:11px;
+	text-align:center;
+}
+
+/**
+Reddit Style Buttons
+**/
+.pulse_votes_container.reddit {
+	background: transparent;
+	width:60px;
+	height:50px;
+	text-align:center;
+	padding:3px;
+}
+
+.reddit  .pulse_vote_buttons{
+	text-align:center;
+	height:50px;
+}
+
+.reddit  .vote_up {
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/reddit_vote_up.png") no-repeat center center;
+	display:block;
+	margin:auto;
+}
+
+.reddit  input[disabled='disabled'].vote_up, .reddit  input.vote_up.disabled{
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/reddit_vote_up_disabled.png") no-repeat center center;
+	display:block;
+	margin:auto;
+}
+
+.reddit  .vote_down {
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/reddit_vote_down.png") no-repeat center center;
+	display:block;
+	margin:auto;
+	margin-top:14px;
+}
+
+.reddit  input[disabled='disabled'].vote_down, .reddit  input.vote_down.disabled{
+	width:20px;
+	display:inline-block;
+	text-indent:-100000%;
+	background:url("../images/reddit_vote_down_disabled.png") no-repeat center center;
+	display:block;
+	margin:auto;
+	margin-top:14px;
+}
+
+.reddit .pulse_result_format {
+	display:block;
+	color:#454545;
+	font-family:verdana,arial,helvetica,sans-serif;
+	margin-top:4px;
+	font-size:12px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:-34px;
 }
 
 span.pulse_load {

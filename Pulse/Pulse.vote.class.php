@@ -1,4 +1,8 @@
 <?php
+/**
+Pulse Lite Voting Script
+http://s.technabled.com/PulseVote
+**/
 include("pulse.config.php");
 class Pulse {
 	private $style;
@@ -94,12 +98,18 @@ class Pulse {
 	**/
 	private function createButtons($item_id){
 		if($this->votedBefore($item_id)==true){
-			return false;
+			$html = <<<EOD
+<span class='pulse_vote_buttons'>
+\t\t<input type='button' class='pulse_vote_button vote_up' data-dir='up' data-itemId='$item_id' data-format='$this->format' disabled='disabled'/>
+\t\t<input type='button' class='pulse_vote_button vote_down' data-dir='down' data-itemId='$item_id' data-format='$this->format' disabled='disabled'>
+\t</span>
+EOD;
+		return $html;
 		} else {
 		$html = <<<EOD
-<span class='pulse_vote_buttons $this->style'>
-\t\t<a href='javascript:;' class='pulse_vote_button vote_up' data-dir='up' data-itemId='$item_id' data-format='$this->format'>Vote Up!</a>
-\t\t<a href='javascript:;' class='pulse_vote_button vote_down' data-dir='down' data-itemId='$item_id' data-format='$this->format'>Vote Down!</a> 
+<span class='pulse_vote_buttons'>
+\t\t<input type='button' class='pulse_vote_button vote_up' data-dir='up' data-itemId='$item_id' data-format='$this->format'/>
+\t\t<input type='button' class='pulse_vote_button vote_down' data-dir='down' data-itemId='$item_id' data-format='$this->format'>
 \t</span>
 EOD;
 		return $html;
@@ -133,7 +143,7 @@ EOD;
 	@scope public
 	**/
 	public function voteHTML($item_id) {
-		$html = "<span class='pulse_votes_container'>\n".$this->createButtons($item_id)."\n<span class='pulse_result_format'>".$this->getFormatted($item_id, $this->format)."</span>\n</span>";
+		$html = "<div class='pulse_votes_container $this->style'>\n".$this->createButtons($item_id)."\n<span class='pulse_result_format'>".$this->getFormatted($item_id, $this->format)."</span>\n</div>";
 		return $html;
 	}
 	
