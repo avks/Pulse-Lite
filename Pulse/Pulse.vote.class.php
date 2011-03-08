@@ -100,8 +100,8 @@ class Pulse {
 		if($this->votedBefore($item_id)==true){
 			$html = <<<EOD
 <span class='pulse_vote_buttons'>
-\t\t<input type='button' class='pulse_vote_button vote_up' data-dir='up' data-itemId='$item_id' data-format='$this->format' disabled='disabled'/>
-\t\t<input type='button' class='pulse_vote_button vote_down' data-dir='down' data-itemId='$item_id' data-format='$this->format' disabled='disabled' class='disabled'>
+\t\t<input type='button' class='pulse_vote_button vote_up disabled' data-dir='up' data-itemId='$item_id' data-format='$this->format' disabled='disabled'/>
+\t\t<input type='button' class='pulse_vote_button vote_down disabled' data-dir='down' data-itemId='$item_id' data-format='$this->format' disabled='disabled'>
 \t</span>
 EOD;
 		return $html;
