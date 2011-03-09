@@ -18,6 +18,11 @@ input.pulse_vote_button {
 	cursor:pointer;
 }
 
+input.pulse_vote_button.disabled {
+	cursor:default;
+	/*cursor:not-allowed;*/
+}
+
 .thumb1 input.vote_up {
 	height:20px;
 	display:inline-block;
